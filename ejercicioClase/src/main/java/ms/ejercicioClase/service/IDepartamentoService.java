@@ -15,5 +15,10 @@ public interface IDepartamentoService {
     public Departamento update(Departamento departamento);
     //Metodo Delete
     public String deletebyId(Integer id);
+    //MetodoPersonalizado
+    public List<Departamento> m2MayorQue(Integer m2);
 
+    public List<Departamento> m2AndPrecio(Integer m2, Double precio);
+
+    public List<Departamento> m2MenorPrecioMayor(Integer m2, Double precio);
 }

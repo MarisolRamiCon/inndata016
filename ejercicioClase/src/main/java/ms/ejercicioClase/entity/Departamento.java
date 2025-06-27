@@ -1,9 +1,15 @@
 package ms.ejercicioClase.entity;
 
 import jakarta.persistence.*;
-import org.hibernate.id.IdentityGenerator;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 
 @Entity
+@AllArgsConstructor //Constructor con todos los argumentos
+@NoArgsConstructor //Constructor sin argumentos
+@Data //getters y setters
 @Table(name = "departamento")
 public class Departamento{
     //Mapear sus atributos
@@ -14,39 +20,7 @@ public class Departamento{
     private Integer m2;
     @Column(name="precio")
     private Double precio;
+    @Column(name = "activo")
+    private Boolean activo;
     //Generar los constructores y los getter y setter
-
-
-    public Departamento() {
-    }
-
-    public Departamento(Integer idDepartamento, Integer m2, Double precio) {
-        this.idDepartamento = idDepartamento;
-        this.m2 = m2;
-        this.precio = precio;
-    }
-
-    public Integer getIdDepartamento() {
-        return idDepartamento;
-    }
-
-    public void setIdDepartamento(Integer idDepartamento) {
-        this.idDepartamento = idDepartamento;
-    }
-
-    public Integer getM2() {
-        return m2;
-    }
-
-    public void setM2(Integer m2) {
-        this.m2 = m2;
-    }
-
-    public Double getPrecio() {
-        return precio;
-    }
-
-    public void setPrecio(Double precio) {
-        this.precio = precio;
-    }
 }

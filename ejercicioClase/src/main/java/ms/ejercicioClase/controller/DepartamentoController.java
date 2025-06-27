@@ -1,5 +1,6 @@
 package ms.ejercicioClase.controller;
 
+import jakarta.websocket.server.PathParam;
 import ms.ejercicioClase.entity.Departamento;
 import ms.ejercicioClase.service.impl.DepartamentoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,5 +38,22 @@ public class DepartamentoController {
     @DeleteMapping("/departamentos/{id}")
     public String delete(@PathVariable Integer id){
         return departamentoService.deletebyId(id);
+    }
+
+    @GetMapping("/departamentos/m2")
+    public List<Departamento> m2MayorQue(@PathParam("m2") Integer m2){
+        return departamentoService.m2MayorQue(m2);
+
+    }
+    @GetMapping("/departamentos/precioM2")
+    public List<Departamento> m2AndPrecio(@PathParam("m2") Integer m2,
+                                          @PathParam("precio") Double precio){
+        return departamentoService.m2AndPrecio(m2,precio);
+    }
+
+    @GetMapping("/departamentos/precioAndM2")
+    public List<Departamento> m2MenorPrecioMayor(@PathParam("m2") Integer m2,
+                                                 @PathParam("precio") Double precio){
+        return departamentoService.m2MenorPrecioMayor(m2,precio);
     }
 }
