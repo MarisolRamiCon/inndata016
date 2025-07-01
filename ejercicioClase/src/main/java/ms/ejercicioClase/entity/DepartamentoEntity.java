@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor //Constructor sin argumentos
 @Data //getters y setters
 @Table(name = "departamento")
-public class Departamento{
+public class DepartamentoEntity {
     //Mapear sus atributos
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

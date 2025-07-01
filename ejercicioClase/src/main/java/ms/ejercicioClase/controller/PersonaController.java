@@ -1,6 +1,6 @@
 package ms.ejercicioClase.controller;
 
-import ms.ejercicioClase.entity.Persona;
+import ms.ejercicioClase.entity.PersonaEntity;
 import ms.ejercicioClase.service.impl.PersonaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,7 +15,7 @@ public class PersonaController {
     @Autowired
     PersonaService personaService;
     @GetMapping("/personas")
-    public List<Persona> readAll(){
+    public List<PersonaEntity> readAll(){
         return personaService.readAll();
     }
 }

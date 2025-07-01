@@ -1,9 +1,9 @@
 package ms.ejercicioClase.service;
 
-import ms.ejercicioClase.entity.Persona;
+import ms.ejercicioClase.entity.PersonaEntity;
 
 import java.util.List;
 
 public interface IPersonaService {
-    public List<Persona> readAll();
+    public List<PersonaEntity> readAll();
 }

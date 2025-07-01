@@ -1,6 +1,6 @@
 package ms.ejercicioClase.service.impl;
 
-import ms.ejercicioClase.entity.Persona;
+import ms.ejercicioClase.entity.PersonaEntity;
 import ms.ejercicioClase.repository.PersonaRepository;
 import ms.ejercicioClase.service.IPersonaService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +13,7 @@ public class PersonaService implements IPersonaService {
     @Autowired
     PersonaRepository personaRepository;
     @Override
-    public List<Persona> readAll() {
+    public List<PersonaEntity> readAll() {
         return personaRepository.findAll();
     }
 }

@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 @Table(name = "persona")
-public class Persona {
+public class PersonaEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -22,6 +22,6 @@ public class Persona {
     private Integer edad;
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_departamento")
-    private Departamento idDepartamento;
+    private DepartamentoEntity idDepartamentoEntity;
 
 }
