@@ -44,8 +44,6 @@ public class DepartamentoService implements IDepartamentoService {
     public String create(DepartamentoEntity departamentoEntity) {
         try {
             departamentoRepository.save(departamentoEntity);
-            DepartamentoResponse departamentoR =
-                    new DepartamentoResponse(departamentoEntity.getIdDepartamento(), departamentoEntity.getPrecio());
             log.info("Departamento creado");
             return "Departamento creado exitosamente";
 
@@ -86,6 +84,10 @@ public class DepartamentoService implements IDepartamentoService {
     @Override
     public List<DepartamentoEntity> m2MenorPrecioMayor(Integer m2, Double precio) {
         return departamentoRepository.m2MenorAndPrecio(m2,precio);
+    }
+
+    public double suma(double num1, double num2){
+        return num1+num2;
     }
 
 
