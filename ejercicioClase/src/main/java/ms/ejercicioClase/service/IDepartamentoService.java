@@ -11,7 +11,7 @@ public interface IDepartamentoService {
     public List<DepartamentoResponse> readAll();
     public Optional<DepartamentoEntity> readById(Integer id);
     //Metodo create
-    public DepartamentoResponse create(DepartamentoEntity departamentoEntity);
+    public String create(DepartamentoEntity departamentoEntity);
     //Metodo update
     public DepartamentoEntity update(DepartamentoEntity departamentoEntity);
     //Metodo Delete

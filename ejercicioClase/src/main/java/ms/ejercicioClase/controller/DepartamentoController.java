@@ -27,7 +27,7 @@ public class DepartamentoController {
     //La diferencia entre create y update es que uno es PutMapping(update)
     // y el otro es PostMapping(create)
     @PostMapping("/departamentos")
-    public DepartamentoResponse create(@RequestBody DepartamentoEntity departamentoEntity){
+    public String create(@RequestBody DepartamentoEntity departamentoEntity){
         return departamentoService.create(departamentoEntity);
     }
 
